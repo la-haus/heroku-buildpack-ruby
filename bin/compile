@@ -15,4 +15,11 @@ source "$BIN_DIR/support/bash_functions.sh"
 heroku_buildpack_ruby_install_ruby "$BIN_DIR" "$BUILDPACK_DIR"
 echo "Run parallel-webpack "
 # $heroku_buildpack_ruby_dir/bin/ruby $BIN_DIR/support/ruby_build $APP_DIR $LAYERS_DIR $PLATFORM_DIR $PLAN
+ls 
+echo $(ls)
+echo $APP_DIR
+echo $BIN_DIR
+echo $BUILDPACK_DIR
+
+parallel-webpack --config=config/webpack/development.js
 $APP_DIR/node_modules/.bin/parallel-webpack --config=config/webpack/development.js
